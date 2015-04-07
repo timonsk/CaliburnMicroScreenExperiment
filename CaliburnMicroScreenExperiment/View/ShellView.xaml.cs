@@ -8,19 +8,14 @@ namespace CaliburnMicroScreenExperiment.View
     /// </summary>
     public partial class ShellView : Window
     {
-        public ShellView()
+        public ShellView(ShellViewModel viewModel)
         {
             InitializeComponent();
-            DataContext = ViewModel;
+            DataContext = viewModel;
         }
-
-        [Inject]
-        public ShellViewModel ViewModel { get; set; }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            var album = ViewModel.User.GetDefaultAlbum();
-            ViewModel.User.Albums.Add(album);
         }
     }
 }

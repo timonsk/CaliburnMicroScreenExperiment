@@ -4,7 +4,7 @@ using System.Linq;
 using CaliburnMicroScreenExperiment.Infrastructure.Interfaces;
 using Ninject;
 
-namespace CaliburnMicroScreenExperimentModule.Models
+namespace Module.CaliburnMicroScreenExperiment.Models
 {
     public class Album : IAlbum
     {

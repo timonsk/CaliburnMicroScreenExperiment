@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows;
 using Caliburn.Micro;
+using CaliburnMicroScreenExperiment.Infrastructure;
 using CaliburnMicroScreenExperiment.View;
 using Ninject;
 
@@ -24,8 +25,9 @@ namespace CaliburnMicroScreenExperiment
         protected override void Configure()
         {
             _kernel.Bind<IWindowManager>().To<WindowManager>();
-            _kernel.Load("CaliburnMicroScreenExperimentModule*.dll");
+            _kernel.Load("Module.*.dll");
             _kernel.Bind<ShellViewModel>().ToSelf().InSingletonScope();
+            _kernel.Bind<IWorkspace>().To<Workspace>().InSingletonScope();
 
         }
 

@@ -1,19 +1,21 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
+using CaliburnMicroScreenExperiment.Infrastructure;
 using CaliburnMicroScreenExperiment.Infrastructure.Interfaces;
 using Ninject;
+
 
 namespace CaliburnMicroScreenExperiment.View
 {
     public class ShellViewModel : DependencyObject
     {
-        public static readonly DependencyProperty UserProperty =
-            DependencyProperty.Register("User", typeof(IUser), typeof(ShellViewModel));
-
-        [Inject]
-        public IUser User
+        public ShellViewModel(IWorkspace control)
         {
-            get { return (IUser)GetValue(UserProperty); }
-            set { SetValue(UserProperty, value); }
+            _workspace = control;
+            DisplayControl = _workspace.GetControl("UserDetailsView");
         }
+
+        private IWorkspace _workspace { get; set; }
+        public UserControl DisplayControl { get; set; }
     }
 }

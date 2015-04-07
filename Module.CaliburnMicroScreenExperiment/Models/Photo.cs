@@ -1,6 +1,6 @@
 ﻿using CaliburnMicroScreenExperiment.Infrastructure.Interfaces;
 
-namespace CaliburnMicroScreenExperimentModule.Models
+namespace Module.CaliburnMicroScreenExperiment.Models
 {
     public class Photo : IPhoto
     {

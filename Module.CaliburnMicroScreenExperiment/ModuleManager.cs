@@ -1,8 +1,8 @@
 ﻿using CaliburnMicroScreenExperiment.Infrastructure.Interfaces;
-using CaliburnMicroScreenExperimentModule.Models;
+using Module.CaliburnMicroScreenExperiment.Models;
 using Ninject.Modules;
 
-namespace CaliburnMicroScreenExperimentModule
+namespace Module.CaliburnMicroScreenExperiment
 {
     public class ModuleManager : NinjectModule
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{4B6D5049-2824-4A4A-BF06-16571CA85E71}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CaliburnMicroScreenExperimentModule</RootNamespace>
-    <AssemblyName>CaliburnMicroScreenExperimentModule</AssemblyName>
+    <RootNamespace>Module.CaliburnMicroScreenExperiment</RootNamespace>
+    <AssemblyName>Module.CaliburnMicroScreenExperiment</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
