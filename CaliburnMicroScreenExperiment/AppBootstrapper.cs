@@ -26,8 +26,9 @@ namespace CaliburnMicroScreenExperiment
         {
             _kernel.Bind<IWindowManager>().To<WindowManager>();
             _kernel.Load("Module.*.dll");
-            _kernel.Bind<ShellViewModel>().ToSelf().InSingletonScope();
             _kernel.Bind<IWorkspace>().To<Workspace>().InSingletonScope();
+            _kernel.Bind<ShellViewModel>().ToSelf().InSingletonScope();
+            
 
         }
 

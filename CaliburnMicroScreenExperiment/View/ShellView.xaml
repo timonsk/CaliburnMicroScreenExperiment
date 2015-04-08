@@ -11,9 +11,8 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <ContentControl Grid.Row="0" Content="{Binding DisplayControl}" >
-            
-            </ContentControl>
+        <ContentControl Grid.Row="0" x:Name="ActiveItem" />
+
         <Grid Grid.Row="1">
             <StackPanel Orientation="Horizontal">
                 <Button Click="ButtonBase_OnClick" Content="Next step" />

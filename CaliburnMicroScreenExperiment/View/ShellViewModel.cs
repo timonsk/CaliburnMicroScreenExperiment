@@ -1,21 +1,24 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using Caliburn.Micro;
 using CaliburnMicroScreenExperiment.Infrastructure;
-using CaliburnMicroScreenExperiment.Infrastructure.Interfaces;
-using Ninject;
-
 
 namespace CaliburnMicroScreenExperiment.View
 {
-    public class ShellViewModel : DependencyObject
+    public class ShellViewModel : Conductor<object>
     {
-        public ShellViewModel(IWorkspace control)
+        public ShellViewModel(IWorkspace workspace)
         {
-            _workspace = control;
-            DisplayControl = _workspace.GetControl("UserDetailsView");
+            _workspace = workspace;
+           var control = _workspace.GetControl("UserDetailsView");
+           ActivateItem(control.DataContext);
+
+        }
+
+        public override sealed void ActivateItem(object item)
+        {
+            base.ActivateItem(item);
         }
 
         private IWorkspace _workspace { get; set; }
-        public UserControl DisplayControl { get; set; }
+
     }
 }

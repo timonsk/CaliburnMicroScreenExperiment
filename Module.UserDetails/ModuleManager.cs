@@ -1,4 +1,5 @@
 ﻿using CaliburnMicroScreenExperiment.Infrastructure.Interfaces;
+using CaliburnMicroScreenExperiment;
 using Module.UserDetails.View;
 using Ninject.Modules;
 
